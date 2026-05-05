@@ -110,6 +110,26 @@ description: <trigger text> # Multi-sentence description of when a coding tool s
 - Every skill ends with an **Anti-Patterns** table (`Anti-pattern | Problem | Fix`).
 - Target length: 300–500 lines. Dense and practical; no filler.
 
+## Plugins
+
+### `credential-expert`
+
+Local credential storage for AI coding agents.
+
+| Skill | Covers |
+|---|---|
+| `credential-storage` | Non-secret index at `~/.agents/credentials.json` (mode 0600); macOS Keychain via `security` for set/read/delete/rotate; canonical safe-consumption pattern for other skills; pre-commit hook to refuse accidental commits of the index file; threat model |
+
+The index schema is forward-compatible with Linux (`secret_service`) and Windows (`credential_manager`) backends — only the per-entry backend object differs.
+
+## Conventions
+
+### Local credentials
+
+Plugins that need persistent secrets MUST consume them through `credential-expert/credential-storage`. Do not introduce a new plaintext token file or a parallel index. The index file is at `~/.agents/credentials.json` (mode `0600`); the parent directory is `~/.agents/` (mode `0700`). Keychain service names follow the convention `open-agent-skills:<plugin-name>`. Account values are either a natural identifier (email, username) or the literal string `default`.
+
+In headless contexts (CI, daemons), consumers should branch on the environment and read from environment-variable secrets instead — `credential-storage` is for interactive workstations.
+
 ## Adding a Plugin
 
 1. Create `plugins/<plugin-name>/` with a `skills/` subdirectory.

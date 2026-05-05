@@ -4,5 +4,16 @@
     "name": "Tyler Calderone",
     "email": "tyler@calder.one"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "credential-expert",
+      "source": "./plugins/credential-expert",
+      "description": "Local credential storage for AI coding agents — index file plus OS keystore (macOS Keychain) for tokens used by other plugins",
+      "version": "0.0.1",
+      "author": {
+        "name": "Tyler Calderone",
+        "email": "tyler@calder.one"
+      }
+    }
+  ]
 }

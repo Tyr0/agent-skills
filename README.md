@@ -25,7 +25,17 @@ ARCHITECTURE.md                      How plugins, skills, and registries fit tog
 README.md                            This file
 ```
 
-Plugins are not yet populated. See `ARCHITECTURE.md` for the plugin and skill format that will land here.
+See `ARCHITECTURE.md` for the plugin and skill format conventions.
+
+## Plugins
+
+### `credential-expert`
+
+Local credential storage for AI coding agents. A non-secret index file at `~/.agents/credentials.json` (mode 0600) maps credential names to OS-keystore references; the actual secrets live in the macOS Keychain as per-credential `generic-password` items. Other plugins (e.g. `pr-expert`) consume credentials through this skill instead of reading plaintext token files.
+
+| Skill | Description |
+|---|---|
+| `credential-storage` | Index file schema, `security` CLI commands for set/read/delete/rotate, the safe-consumption pattern for downstream skills, a global pre-commit hook for accidental-commit defense, and the threat model |
 
 ## Installing
 

@@ -1,0 +1,21 @@
+{
+  "name": "credential-expert",
+  "version": "0.0.1",
+  "description": "Local credential storage for AI coding agents — index file plus OS keystore (macOS Keychain) for tokens used by other plugins",
+  "author": {
+    "name": "Tyler Calderone",
+    "email": "tyler@calder.one"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Credential Expert",
+    "shortDescription": "Local credential storage for AI agents",
+    "longDescription": "Skill for storing and reading API tokens used by other plugins. A non-secret index file at ~/.agents/credentials.json (mode 0600) maps credential names to OS-keystore references; the actual secrets live in macOS Keychain as per-credential generic-password items. Documents the schema, the security CLI commands for set/read/delete/rotate, the safe consumption pattern for other skills, a pre-commit hook for accidental-commit defense, and the threat model.",
+    "developerName": "Tyler Calderone",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}
