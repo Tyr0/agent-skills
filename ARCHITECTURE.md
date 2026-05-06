@@ -141,6 +141,25 @@ Pull request management across GitHub and Bitbucket Cloud. Consumes credentials 
 | `pr-management` | PR lifecycle — create, list, update, merge, decline, diffs, CI status, conflicts |
 | `pr-review` | Comments (general + inline), reviews, approvals, thread resolution, Bitbucket tasks |
 
+### `rails-expert`
+
+Ruby on Rails best practices, from the database layer through the frontend.
+
+| Skill | Covers |
+|---|---|
+| `rails-active-job` | Background jobs — Solid Queue, GoodJob, Sidekiq, `retry_on`, `discard_on` |
+| `rails-activerecord-queries` | Query optimization — N+1, eager loading, batch processing, bulk operations |
+| `rails-caching` | Caching — fragment/Russian doll, low-level cache, HTTP caching, Redis, invalidation |
+| `rails-console` | `bin/rails console` — sandbox, querying, production access, IRB tips |
+| `rails-db` | Database management — migrations, schema formats, multi-database, safe patterns |
+| `rails-db-best-practices` | Schema design — indexes, associations, Postgres features (JSONB, GIN, advisory locks) |
+| `rails-generate` | Code generation — models, migrations, controllers, scaffolds, custom generators |
+| `rails-hotwire` | Hotwire — Turbo Drive, Turbo Frames, Turbo Streams (HTTP + broadcasts), Stimulus |
+| `rails-routing` | Routing — resources, nested routes, namespaces, constraints, route helpers |
+| `rails-tailwind` | Tailwind CSS — setup, config, dynamic classes, ViewComponent integration, dark mode |
+| `rails-testing` | Minitest — fixtures, model/integration/system tests, SimpleCov, Capybara |
+| `rails-views` | View layer — ERB partials, layouts, ViewComponent, Phlex, form helpers |
+
 ### `swift-expert`
 
 Swift language knowledge focused on correctness and performance.

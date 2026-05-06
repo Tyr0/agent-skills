@@ -1,0 +1,21 @@
+{
+  "name": "rails-expert",
+  "version": "0.0.1",
+  "description": "Ruby on Rails knowledge covering database, backend, frontend, and testing workflows",
+  "author": {
+    "name": "Tyler Calderone",
+    "email": "tyler@calder.one"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Rails Expert",
+    "shortDescription": "Ruby on Rails development knowledge",
+    "longDescription": "Skills for Rails database management, schema design, Active Record queries, jobs, caching, console workflows, generators, routing, views, Hotwire, Tailwind CSS, and testing.",
+    "developerName": "Tyler Calderone",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}

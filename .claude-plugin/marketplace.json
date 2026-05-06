@@ -36,6 +36,16 @@
       }
     },
     {
+      "name": "rails-expert",
+      "source": "./plugins/rails-expert",
+      "description": "Ruby on Rails knowledge covering background jobs, ActiveRecord queries, caching, console workflows, database management, schema best practices, generators, Hotwire, routing, Tailwind CSS, testing, and views",
+      "version": "0.0.1",
+      "author": {
+        "name": "Tyler Calderone",
+        "email": "tyler@calder.one"
+      }
+    },
+    {
       "name": "swift-expert",
       "source": "./plugins/swift-expert",
       "description": "Swift knowledge focused on correctness, testing, concurrency, IPC, and performance",

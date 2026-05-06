@@ -62,6 +62,27 @@ Skills for managing pull requests on GitHub and Bitbucket Cloud via their REST A
 
 ---
 
+### `rails-expert`
+
+Skills for working with Ruby on Rails.
+
+| Skill | Description |
+|---|---|
+| `rails-active-job` | Background jobs with Active Job — job structure, queue adapters (Solid Queue, GoodJob, Sidekiq), `retry_on`, `discard_on`, mailer delivery, and testing jobs |
+| `rails-activerecord-queries` | ActiveRecord query optimization — N+1 prevention, `includes`/`eager_load`/`preload`, batch processing (`find_each`), bulk operations (`update_all`, `insert_all`), `pluck`, `exists?`, and the Bullet gem |
+| `rails-caching` | Caching — fragment and Russian doll caching, low-level `Rails.cache` usage, HTTP caching (`ETag`, `Cache-Control`), cache store selection (Redis, Memcached), cache key design, and invalidation strategies |
+| `rails-console` | Using `bin/rails console` — sandbox mode, `bin/dev` context, querying and mutating data, reloading code, production console access (Fly, Heroku, Kubernetes), IRB configuration, and common debugging patterns |
+| `rails-db` | Database management via `bin/rails db:*` — running and rolling back migrations, checking migration status, seeding, schema formats (`schema.rb` vs `structure.sql`), multi-database setups, and safe migration patterns |
+| `rails-db-best-practices` | Schema design best practices — indexing strategies, association patterns, join tables, Postgres-specific features (JSONB, GIN/GiST indexes, range types, advisory locks, upsert), and migration anti-patterns |
+| `rails-generate` | Code generation via `bin/rails generate` — models, migrations, controllers, scaffolds, mailers, jobs, channels, concerns, the Dockerfile generator, and custom generators |
+| `rails-hotwire` | Hotwire — Turbo Drive (page navigation without reloads), Turbo Frames (scoped partial updates), Turbo Streams (DOM mutations from HTTP responses and Action Cable broadcasts), and Stimulus (lightweight JS controllers with targets, values, actions, and outlets) |
+| `rails-routing` | Routing — `resources`/`resource`, nested routes, shallow nesting, namespaces, scopes, member/collection routes, named routes, constraints, catch-alls, and `draw` for large route files |
+| `rails-tailwind` | Tailwind CSS — `tailwindcss-rails` setup, `tailwind.config.js`, purge-safe dynamic classes, extracting patterns with partials and ViewComponent, responsive design, dark mode, design tokens, the forms and typography plugins, and `@apply` guidance |
+| `rails-testing` | Testing with Minitest — fixtures, model tests, integration/controller tests, system tests (Capybara), mailer tests, job tests, SimpleCov, parallel tests, and RuboCop-Minitest |
+| `rails-views` | View layer — ERB partials, collection rendering, layouts and `content_for`/`yield`, view helpers, ViewComponent (slots, testing, previews, sidecar assets, Stimulus integration), and Phlex (pure-Ruby views) |
+
+---
+
 ### `swift-expert`
 
 Skills for writing Swift with a focus on correctness and performance.
