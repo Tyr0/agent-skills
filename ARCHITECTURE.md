@@ -122,6 +122,15 @@ Local credential storage for AI coding agents.
 
 The index schema is forward-compatible with Linux (`secret_service`) and Windows (`credential_manager`) backends — only the per-entry backend object differs.
 
+### `fly-expert`
+
+Fly.io deployment knowledge.
+
+| Skill | Covers |
+|---|---|
+| `fly-rails-deployment` | Rails on Fly — `fly launch`, `fly.toml`, generated Dockerfile, secrets, Sidekiq process groups, health checks, scaling, local Docker parity |
+| `fly-postgres` | Postgres on Fly — MPG vs unmanaged, attach, `DATABASE_URL`, migrations via `release_command`, proxy, pooling, backups, HA |
+
 ### `swift-expert`
 
 Swift language knowledge focused on correctness and performance.

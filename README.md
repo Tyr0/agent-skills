@@ -39,6 +39,17 @@ Local credential storage for AI coding agents. A non-secret index file at `~/.ag
 
 ---
 
+### `fly-expert`
+
+Skills for deploying and operating applications on [Fly.io](https://fly.io).
+
+| Skill | Description |
+|---|---|
+| `fly-rails-deployment` | Deploying Ruby on Rails to Fly.io — `fly launch`, `fly.toml` configuration, the generated Dockerfile, secrets management, multi-process setups (Sidekiq), health checks, scaling, one-off commands, and local Docker development that mirrors production |
+| `fly-postgres` | Postgres on Fly.io — Managed Postgres (MPG) vs unmanaged clusters, `fly postgres attach`, `DATABASE_URL` configuration, running migrations via `release_command`, local proxy access, connection pooling (PgBouncer), backups, and HA |
+
+---
+
 ### `swift-expert`
 
 Skills for writing Swift with a focus on correctness and performance.

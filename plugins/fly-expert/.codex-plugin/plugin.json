@@ -1,0 +1,21 @@
+{
+  "name": "fly-expert",
+  "version": "0.0.1",
+  "description": "Fly.io deployment knowledge for Rails and Postgres",
+  "author": {
+    "name": "Tyler Calderone",
+    "email": "tyler@calder.one"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Fly Expert",
+    "shortDescription": "Fly.io deployment knowledge for Rails and Postgres",
+    "longDescription": "Skills for deploying and operating Rails applications and Postgres databases on Fly.io.",
+    "developerName": "Tyler Calderone",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}
