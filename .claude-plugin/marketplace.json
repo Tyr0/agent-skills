@@ -54,6 +54,16 @@
         "name": "Tyler Calderone",
         "email": "tyler@calder.one"
       }
+    },
+    {
+      "name": "swiftui-expert",
+      "source": "./plugins/swiftui-expert",
+      "description": "SwiftUI knowledge — state management with the Observation framework, view performance, layout, navigation, animation, UIKit interop, and accessibility",
+      "version": "0.0.1",
+      "author": {
+        "name": "Tyler Calderone",
+        "email": "tyler@calder.one"
+      }
     }
   ]
 }

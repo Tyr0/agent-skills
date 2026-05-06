@@ -1,0 +1,21 @@
+{
+  "name": "swiftui-expert",
+  "version": "0.0.1",
+  "description": "SwiftUI knowledge — state management with the Observation framework, view performance, layout, navigation, animation, UIKit interop, and accessibility",
+  "author": {
+    "name": "Tyler Calderone",
+    "email": "tyler@calder.one"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SwiftUI Expert",
+    "shortDescription": "SwiftUI correctness and performance knowledge",
+    "longDescription": "Skills for SwiftUI state management (Observation, @State, @Binding, @Environment), view performance and identity, layout, navigation (NavigationStack/Split), animation, UIKit/AppKit interop, and accessibility. Targets iOS 17+ / macOS 14+.",
+    "developerName": "Tyler Calderone",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}

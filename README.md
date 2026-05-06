@@ -94,6 +94,22 @@ Skills for writing Swift with a focus on correctness and performance.
 | `swift-synchronization` | Threading and synchronization — `DispatchQueue` ownership pattern, `OSAllocatedUnfairLock`, Swift `Mutex` and `Atomic` (Synchronization module), actors and `nonisolated`, memory ordering, priority inversion, and deadlock |
 | `swift-testing` | Testing with Swift Testing (Swift 5.9+ / Xcode 16+) — `@Suite`, `@Test`, `#expect`, `#require`, parameterized tests, async tests, tags, traits, dependency injection, and XCTest migration |
 
+---
+
+### `swiftui-expert`
+
+Skills for writing SwiftUI on iOS 17+ / macOS 14+, with the Observation framework as the default data-flow model.
+
+| Skill | Description |
+|---|---|
+| `swiftui-state-management` | State and data flow — `@State`, `@Binding`, `@Bindable`, `@Environment`, the Observation framework (`@Observable`), view re-rendering rules, identity-keyed state lifetime, and migration from `ObservableObject`/`@StateObject`/`@EnvironmentObject` |
+| `swiftui-performance` | Performance — body invalidation rules, `EquatableView`, view identity, lazy containers (`LazyVStack`, `List`), image decoding strategy, `drawingGroup()` and `Canvas`, `.task` lifecycle, and profiling via the SwiftUI Instruments template |
+| `swiftui-layout` | Layout — the proposed-size / required-size negotiation, `frame` vs `fixedSize`, stacks and `Spacer`, alignment guides, safe area, `containerRelativeFrame`, `onGeometryChange`, grids, `ScrollView` APIs, and the custom `Layout` protocol |
+| `swiftui-navigation` | Navigation — `NavigationStack`, `NavigationSplitView`, `NavigationPath`, value-based navigation with `navigationDestination(for:)`, deep linking, sheets/popovers/covers/inspectors, the `dismiss` environment, and migration from `NavigationView` |
+| `swiftui-animation` | Animation — `withAnimation` vs `.animation(_:value:)`, `Transaction`, transitions, `matchedGeometryEffect`, `PhaseAnimator`, `KeyframeAnimator`, custom `Animatable` types, and `contentTransition` |
+| `swiftui-uikit-interop` | Bridging — `UIViewRepresentable`/`UIViewControllerRepresentable` (and AppKit equivalents), the Coordinator pattern, `UIHostingController`, `UIHostingConfiguration` for cells, sizing with `sizeThatFits`, and lifecycle management |
+| `swiftui-accessibility` | Accessibility — labels/values/hints/traits, grouping with `accessibilityElement(children:)`, custom actions and rotors, Dynamic Type with `@ScaledMetric`, Reduce Motion, VoiceOver focus, and an audit checklist |
+
 ## Installing
 
 ### Claude Code

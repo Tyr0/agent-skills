@@ -171,6 +171,20 @@ Swift language knowledge focused on correctness and performance.
 | `swift-synchronization` | Threading — `DispatchQueue` ownership, `OSAllocatedUnfairLock`, Swift `Mutex`/`Atomic`, actors, memory ordering, deadlock |
 | `swift-testing` | Swift Testing — `@Suite`, `@Test`, `#expect`, `#require`, parameterized tests, traits, XCTest migration |
 
+### `swiftui-expert`
+
+SwiftUI knowledge targeting iOS 17+ / macOS 14+, with the Observation framework as the default data-flow model.
+
+| Skill | Covers |
+|---|---|
+| `swiftui-state-management` | `@State`, `@Binding`, `@Bindable`, `@Environment`, the Observation framework (`@Observable`), view re-rendering rules, identity, migration from `ObservableObject` |
+| `swiftui-performance` | Body invalidation, `EquatableView`, lazy containers, image performance, `drawingGroup`/`Canvas`, `.task` lifecycle, profiling with the SwiftUI Instruments template |
+| `swiftui-layout` | Proposed/required size negotiation, `frame`/`fixedSize`, alignment guides, safe area, `containerRelativeFrame`, `onGeometryChange`, custom `Layout` |
+| `swiftui-navigation` | `NavigationStack`, `NavigationSplitView`, `NavigationPath`, value-based `navigationDestination`, deep linking, sheets/popovers/covers, `dismiss` |
+| `swiftui-animation` | `withAnimation`, `.animation(_:value:)`, transactions, transitions, `matchedGeometryEffect`, `PhaseAnimator`, `KeyframeAnimator`, `Animatable` |
+| `swiftui-uikit-interop` | `UIViewRepresentable`/`UIViewControllerRepresentable` (and AppKit), Coordinator pattern, `UIHostingController`/`UIHostingConfiguration`, sizing, lifecycle |
+| `swiftui-accessibility` | Labels/values/hints/traits, grouping with `accessibilityElement`, custom actions and rotors, Dynamic Type, Reduce Motion, focus, audit checklist |
+
 ## Conventions
 
 ### Local credentials
