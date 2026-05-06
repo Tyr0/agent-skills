@@ -37,6 +37,19 @@ Local credential storage for AI coding agents. A non-secret index file at `~/.ag
 |---|---|
 | `credential-storage` | Index file schema, `security` CLI commands for set/read/delete/rotate, the safe-consumption pattern for downstream skills, a global pre-commit hook for accidental-commit defense, and the threat model |
 
+---
+
+### `swift-expert`
+
+Skills for writing Swift with a focus on correctness and performance.
+
+| Skill | Description |
+|---|---|
+| `swift-ipc` | Inter-process communication on Apple platforms — XPC, `NSXPCConnection`, shared memory (`mmap`, POSIX `shm`), lock-free SPSC ring buffers, Mach messages, and cross-process synchronization patterns |
+| `swift-performance` | Performance and optimization — method dispatch, existentials, ARC, copy-on-write, value vs reference types, noncopyable types (`~Copyable`), typed throws, collections, strings, struct layout, and Swift Concurrency overhead |
+| `swift-synchronization` | Threading and synchronization — `DispatchQueue` ownership pattern, `OSAllocatedUnfairLock`, Swift `Mutex` and `Atomic` (Synchronization module), actors and `nonisolated`, memory ordering, priority inversion, and deadlock |
+| `swift-testing` | Testing with Swift Testing (Swift 5.9+ / Xcode 16+) — `@Suite`, `@Test`, `#expect`, `#require`, parameterized tests, async tests, tags, traits, dependency injection, and XCTest migration |
+
 ## Installing
 
 ### Claude Code

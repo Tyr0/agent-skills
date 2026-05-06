@@ -122,6 +122,17 @@ Local credential storage for AI coding agents.
 
 The index schema is forward-compatible with Linux (`secret_service`) and Windows (`credential_manager`) backends — only the per-entry backend object differs.
 
+### `swift-expert`
+
+Swift language knowledge focused on correctness and performance.
+
+| Skill | Covers |
+|---|---|
+| `swift-ipc` | IPC on Apple platforms — XPC, shared memory, lock-free SPSC ring buffers, Mach messages, cross-process sync |
+| `swift-performance` | Performance — dispatch, existentials, ARC, copy-on-write, `~Copyable`, typed throws, collections, layout, Concurrency overhead |
+| `swift-synchronization` | Threading — `DispatchQueue` ownership, `OSAllocatedUnfairLock`, Swift `Mutex`/`Atomic`, actors, memory ordering, deadlock |
+| `swift-testing` | Swift Testing — `@Suite`, `@Test`, `#expect`, `#require`, parameterized tests, traits, XCTest migration |
+
 ## Conventions
 
 ### Local credentials

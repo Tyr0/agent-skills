@@ -1,0 +1,21 @@
+{
+  "name": "swift-expert",
+  "version": "0.0.1",
+  "description": "Swift knowledge focused on correctness, testing, concurrency, IPC, and performance",
+  "author": {
+    "name": "Tyler Calderone",
+    "email": "tyler@calder.one"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Swift Expert",
+    "shortDescription": "Swift correctness and performance knowledge",
+    "longDescription": "Skills for Swift performance, testing, inter-process communication, threading, and synchronization.",
+    "developerName": "Tyler Calderone",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}
