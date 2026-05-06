@@ -50,6 +50,18 @@ Skills for deploying and operating applications on [Fly.io](https://fly.io).
 
 ---
 
+### `pr-expert`
+
+Skills for managing pull requests on GitHub and Bitbucket Cloud via their REST APIs. Credentials are consumed through `credential-expert/credential-storage`.
+
+| Skill | Description |
+|---|---|
+| `pr-setup` | Authentication and configuration — platform detection from git remote, the `github` and `bitbucket` credential entries, base URLs, auth headers, pagination patterns, and 401/403 troubleshooting |
+| `pr-management` | PR lifecycle — create, list, get, update, merge (squash/rebase/merge commit), decline/close, view diffs (raw and structured), check merge conflicts and CI/build status, list commits, and sync branches |
+| `pr-review` | Reviewing and commenting — post general and inline code comments, reply to threads, read all PR feedback, submit reviews (approve/request changes), dismiss reviews, resolve conversations, and manage Bitbucket tasks |
+
+---
+
 ### `swift-expert`
 
 Skills for writing Swift with a focus on correctness and performance.

@@ -1,0 +1,21 @@
+{
+  "name": "pr-expert",
+  "version": "0.0.1",
+  "description": "Pull request management for GitHub and Bitbucket Cloud via REST APIs",
+  "author": {
+    "name": "Tyler Calderone",
+    "email": "tyler@calder.one"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PR Expert",
+    "shortDescription": "Pull request management for GitHub and Bitbucket Cloud",
+    "longDescription": "Skills for creating, reviewing, commenting on, merging, and inspecting pull requests through GitHub and Bitbucket Cloud REST APIs.",
+    "developerName": "Tyler Calderone",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}

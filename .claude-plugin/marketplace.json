@@ -26,6 +26,16 @@
       }
     },
     {
+      "name": "pr-expert",
+      "source": "./plugins/pr-expert",
+      "description": "Pull request management for GitHub and Bitbucket Cloud — create, review, comment, merge, and inspect PRs via REST APIs",
+      "version": "0.0.1",
+      "author": {
+        "name": "Tyler Calderone",
+        "email": "tyler@calder.one"
+      }
+    },
+    {
       "name": "swift-expert",
       "source": "./plugins/swift-expert",
       "description": "Swift knowledge focused on correctness, testing, concurrency, IPC, and performance",

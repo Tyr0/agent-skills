@@ -131,6 +131,16 @@ Fly.io deployment knowledge.
 | `fly-rails-deployment` | Rails on Fly — `fly launch`, `fly.toml`, generated Dockerfile, secrets, Sidekiq process groups, health checks, scaling, local Docker parity |
 | `fly-postgres` | Postgres on Fly — MPG vs unmanaged, attach, `DATABASE_URL`, migrations via `release_command`, proxy, pooling, backups, HA |
 
+### `pr-expert`
+
+Pull request management across GitHub and Bitbucket Cloud. Consumes credentials through `credential-expert/credential-storage`.
+
+| Skill | Covers |
+|---|---|
+| `pr-setup` | Auth, platform detection, credential names (`github`, `bitbucket`), pagination |
+| `pr-management` | PR lifecycle — create, list, update, merge, decline, diffs, CI status, conflicts |
+| `pr-review` | Comments (general + inline), reviews, approvals, thread resolution, Bitbucket tasks |
+
 ### `swift-expert`
 
 Swift language knowledge focused on correctness and performance.
