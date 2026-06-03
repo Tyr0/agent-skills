@@ -1,7 +1,7 @@
 {
   "name": "tcalderone-agent-skills",
   "interface": {
-    "displayName": "tcalderone-agent-skills"
+    "displayName": "Agent Skills"
   },
   "plugins": [
     {

@@ -15,9 +15,9 @@ This skill is for interactive workstation use. CI and other headless contexts sh
 
 | Operation | Command |
 |---|---|
-| Set or rotate (macOS) | `security add-generic-password -U -s 'tcalderone-agent-skills:<name>' -a '<account>' -w "$value"` |
-| Read (macOS) | `security find-generic-password -w -s 'tcalderone-agent-skills:<name>' -a '<account>'` |
-| Delete (macOS) | `security delete-generic-password -s 'tcalderone-agent-skills:<name>' -a '<account>'` |
+| Set or rotate (macOS) | `security add-generic-password -U -s 'agent-skills:<name>' -a '<account>' -w "$value"` |
+| Read (macOS) | `security find-generic-password -w -s 'agent-skills:<name>' -a '<account>'` |
+| Delete (macOS) | `security delete-generic-password -s 'agent-skills:<name>' -a '<account>'` |
 | List configured | Read names from `~/.agents/credentials.json` |
 
 `<name>` is the credential name (e.g. `github`, `bitbucket`); `<account>` is the entry's `account` field, or `default` when absent. See **Keying Convention** below.
@@ -74,9 +74,9 @@ Consuming skills derive the keystore lookup from `(plugin-prefix, credential-nam
 
 | Backend | Keystore call shape |
 |---|---|
-| `macos-keychain` (default on Darwin) | `service = "tcalderone-agent-skills:<name>"`, `account = entry.account or "default"` |
-| `secret-service` (default on Linux) | attrs `{application: "tcalderone-agent-skills", credential: "<name>", account: entry.account or "default"}` |
-| `windows-credential-manager` (default on Windows) | `target = "tcalderone-agent-skills:<name>"`, `username = entry.account or "default"` |
+| `macos-keychain` (default on Darwin) | `service = "agent-skills:<name>"`, `account = entry.account or "default"` |
+| `secret-service` (default on Linux) | attrs `{application: "agent-skills", credential: "<name>", account: entry.account or "default"}` |
+| `windows-credential-manager` (default on Windows) | `target = "agent-skills:<name>"`, `username = entry.account or "default"` |
 
 Backend selection: if `entry.backend` is present, use it; otherwise infer from `uname -s`. The index file is never required to know the platform.
 
@@ -119,7 +119,7 @@ read -rs value && echo
 
 security add-generic-password \
   -U \
-  -s 'tcalderone-agent-skills:bitbucket' \
+  -s 'agent-skills:bitbucket' \
   -a 'tyler@calder.one' \
   -w "$value"
 
@@ -178,7 +178,7 @@ print(entry.get('account', 'default'))
 ")
 
 # 2. Fetch the secret. Never echo, printf, or cat it.
-service="tcalderone-agent-skills:$name"
+service="agent-skills:$name"
 bb_token=$(security find-generic-password -w -s "$service" -a "$account")
 
 # 3. Use it via a flag that reads from a variable. Unset immediately after.
@@ -191,7 +191,7 @@ unset bb_token
 If the consuming command supports an environment-variable form for credentials (most HTTP clients and SDKs do), pass via the environment of the child process rather than a command-line flag — flag arguments appear in `ps`, environment variables of a child process do not appear in another user's `ps` output.
 
 ```bash
-GITHUB_TOKEN=$(security find-generic-password -w -s 'tcalderone-agent-skills:github' -a 'default') \
+GITHUB_TOKEN=$(security find-generic-password -w -s 'agent-skills:github' -a 'default') \
   gh pr list
 unset GITHUB_TOKEN
 ```
@@ -224,7 +224,7 @@ data = json.loads((pathlib.Path.home() / '.agents/credentials.json').read_text()
 print(data['credentials'].get('$name', {}).get('account', 'default'))
 ")
 
-security delete-generic-password -s "tcalderone-agent-skills:$name" -a "$account"
+security delete-generic-password -s "agent-skills:$name" -a "$account"
 
 python3 - <<'PY'
 import json, os, pathlib
@@ -330,10 +330,10 @@ print('__missing__' if e is None else json.dumps(e))
 
   case "$backend" in
     macos-keychain)
-      security find-generic-password -w -s "tcalderone-agent-skills:$name" -a "$account"
+      security find-generic-password -w -s "agent-skills:$name" -a "$account"
       ;;
     secret-service)
-      secret-tool lookup application tcalderone-agent-skills credential "$name" account "$account"
+      secret-tool lookup application agent-skills credential "$name" account "$account"
       ;;
     *)
       echo "unsupported backend: $backend" >&2; return 1
@@ -376,7 +376,7 @@ The security ceiling here is "raise the cost of opportunistic credential theft t
 | Running `set -x` while a secret is in scope | xtrace prints every expansion, including the secret | Disable xtrace before the read; re-enable only after `unset` |
 | Passing the secret as a literal `curl` flag value | Visible in `ps` output to the same user | Use `-u "$user:$token"` (variable expansion is short-lived in argv); prefer env-var auth where supported |
 | Mode `0644` on `~/.agents/credentials.json` | Other users on the machine can enumerate configured services | Enforce `0600` on every write; verify with `stat` before reading |
-| Editing the index to use a custom keystore service name | Diverges from the keying convention; entry becomes unreadable to every consuming skill | Service names are conventional — `tcalderone-agent-skills:<name>`. Don't fight it. |
+| Editing the index to use a custom keystore service name | Diverges from the keying convention; entry becomes unreadable to every consuming skill | Service names are conventional — `agent-skills:<name>`. Don't fight it. |
 | Syncing `~/.agents/` across machines (iCloud, Dropbox, syncthing) | Keystore items are not portable; the index ends up referencing secrets that don't exist on the target machine | Keep `~/.agents/` local; re-add credentials per machine |
 | Falling back to plaintext on first-run failure | Quietly downgrades the security posture | Fail loud; require the user to fix the keystore problem before proceeding |
 | Calling `security` in CI | Hangs or fails opaquely without a GUI session | Branch on the environment; read from CI-provided env vars instead |

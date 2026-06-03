@@ -2,7 +2,7 @@
 
 ## Overview
 
-`tcalderone-agent-skills` is a multi-agent skills library. Each plugin groups one or more *skills* — self-contained reference documents that compatible coding tools load when a user's question matches the skill's trigger description.
+`agent-skills` is a multi-agent skills library. Each plugin groups one or more *skills* — self-contained reference documents that compatible coding tools load when a user's question matches the skill's trigger description.
 
 The repository is structured so that one source of truth (`plugins/`) feeds multiple coding agents through tool-specific registries.
 
@@ -189,7 +189,7 @@ SwiftUI knowledge targeting iOS 17+ / macOS 14+, with the Observation framework 
 
 ### Local credentials
 
-Plugins that need persistent secrets MUST consume them through `credential-expert/credential-storage`. Do not introduce a new plaintext token file or a parallel index. The index file is at `~/.agents/credentials.json` (mode `0600`); the parent directory is `~/.agents/` (mode `0700`). Keychain service names follow the convention `tcalderone-agent-skills:<plugin-name>`. Account values are either a natural identifier (email, username) or the literal string `default`.
+Plugins that need persistent secrets MUST consume them through `credential-expert/credential-storage`. Do not introduce a new plaintext token file or a parallel index. The index file is at `~/.agents/credentials.json` (mode `0600`); the parent directory is `~/.agents/` (mode `0700`). Keychain service names follow the convention `agent-skills:<plugin-name>`. Account values are either a natural identifier (email, username) or the literal string `default`.
 
 In headless contexts (CI, daemons), consumers should branch on the environment and read from environment-variable secrets instead — `credential-storage` is for interactive workstations.
 
