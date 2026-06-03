@@ -1,4 +1,4 @@
-# agent-skills
+# tcalderone-agent-skills
 
 An open-source library of plugins and skills for AI coding agents.
 
@@ -117,7 +117,7 @@ Skills for writing SwiftUI on iOS 17+ / macOS 14+, with the Observation framewor
 Add this repository as a marketplace, then install the plugins you want:
 
 ```bash
-claude plugin marketplace add Tyr0/agent-skills
+claude plugin marketplace add Tyr0/tcalderone-agent-skills
 claude plugin install <plugin-name>
 ```
 
