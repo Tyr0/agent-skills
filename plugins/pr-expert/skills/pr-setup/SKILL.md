@@ -66,7 +66,7 @@ This skill consumes two credentials registered via the `credential-storage` skil
 GitHub:
 
 ```bash
-TOKEN=$(security find-generic-password -w -s 'open-agent-skills:github' -a 'default')
+TOKEN=$(security find-generic-password -w -s 'agent-skills:github' -a 'default')
 ```
 
 Bitbucket — the email lives in the index entry's `account` field; the token is in Keychain under that account:
@@ -77,7 +77,7 @@ import json, pathlib
 data = json.loads((pathlib.Path.home() / '.agents/credentials.json').read_text())
 print(data['credentials']['bitbucket']['account'])
 ")
-BB_API_TOKEN=$(security find-generic-password -w -s 'open-agent-skills:bitbucket' -a "$BB_EMAIL")
+BB_API_TOKEN=$(security find-generic-password -w -s 'agent-skills:bitbucket' -a "$BB_EMAIL")
 ```
 
 After API calls, `unset TOKEN BB_API_TOKEN` to remove secrets from the shell environment.
@@ -94,7 +94,7 @@ If a credential is not yet registered, `security` exits with a non-zero status. 
 3. Register the token (paste at the prompt):
 
    ```bash
-   security add-generic-password -U -s 'open-agent-skills:github' -a 'default'
+   security add-generic-password -U -s 'agent-skills:github' -a 'default'
    ```
 
 4. Add an index entry:
@@ -118,7 +118,7 @@ If a credential is not yet registered, `security` exits with a non-zero status. 
 3. Register the token under your Atlassian email (replace `<email>`):
 
    ```bash
-   security add-generic-password -U -s 'open-agent-skills:bitbucket' -a '<email>'
+   security add-generic-password -U -s 'agent-skills:bitbucket' -a '<email>'
    ```
 
 4. Add an index entry:
