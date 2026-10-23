@@ -1,0 +1,10 @@
+{
+  "name": "product-design-harness",
+  "version": "1.0.0",
+  "description": "Product judgment across User, Evidence, and Business flows before execution and during the next iteration.",
+  "author": {
+    "name": "CIS2042"
+  },
+  "skills": "./skills/",
+  "license": "MIT"
+}

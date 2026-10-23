@@ -110,6 +110,14 @@ Skills for writing SwiftUI on iOS 17+ / macOS 14+, with the Observation framewor
 | `swiftui-uikit-interop` | Bridging — `UIViewRepresentable`/`UIViewControllerRepresentable` (and AppKit equivalents), the Coordinator pattern, `UIHostingController`, `UIHostingConfiguration` for cells, sizing with `sizeThatFits`, and lifecycle management |
 | `swiftui-accessibility` | Accessibility — labels/values/hints/traits, grouping with `accessibilityElement(children:)`, custom actions and rotors, Dynamic Type with `@ScaledMetric`, Reduce Motion, VoiceOver focus, and an audit checklist |
 
+### `product-design-harness`
+
+Product judgment across User, Evidence, and Business flows before execution and during the next iteration.
+
+| Skill | Description |
+|---|---|
+| `product-design-harness` | Evaluate product directions, features, workflows, experiments and launch decisions using the original UX3 decision gates and bundled resources. |
+
 ## Installing
 
 ### Claude Code
