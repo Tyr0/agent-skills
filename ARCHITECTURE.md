@@ -112,6 +112,14 @@ description: <trigger text> # Multi-sentence description of when a coding tool s
 
 ## Plugins
 
+### `product-design-harness`
+
+Product judgment across User, Evidence, and Business flows before execution and during the next iteration.
+
+| Skill | Covers |
+|---|---|
+| `product-design-harness` | Evaluate product directions, features, workflows, experiments and launch decisions using the original UX3 decision gates and bundled resources. |
+
 ### `credential-expert`
 
 Local credential storage for AI coding agents.
